@@ -5,8 +5,14 @@
     <groupId>com.example</groupId>
     <artifactId>spring-boot-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>spring-boot-demo</name>
     <description>Demo project for Spring Boot 2.x</description>
+    <modules>
+        <module>demo-01-jedis</module>
+        <module>demo-02-lettuce</module>
+        <module>demo-03-redission</module>
+    </modules>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,7 +22,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
