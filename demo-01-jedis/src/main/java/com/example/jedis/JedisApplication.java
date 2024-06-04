@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.jedis;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,11 +10,14 @@ import org.springframework.core.env.Environment;
 
 import java.net.InetAddress;
 
+/**
+ * @author xingang
+ * @since 2024/05/29 18:13
+ */
 @SpringBootApplication
-public class DemoApplication {
-
+public class JedisApplication {
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(JedisApplication.class, args);
     }
 
     @Bean
