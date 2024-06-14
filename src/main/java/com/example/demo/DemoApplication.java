@@ -8,12 +8,15 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.env.Environment;
 
+import javax.swing.*;
 import java.net.InetAddress;
 
 @SpringBootApplication
 public class DemoApplication {
 
     public static void main(String[] args) {
+        // 启用 ANSI 颜色输出 方法1
+        System.setProperty("spring.output.ansi.enabled", "ALWAYS");
         SpringApplication.run(DemoApplication.class, args);
     }
 
