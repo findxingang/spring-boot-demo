@@ -12,6 +12,7 @@
         <module>demo-01-jedis</module>
         <module>demo-02-lettuce</module>
         <module>demo-03-redission</module>
+        <module>demo-04-redis-command</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
