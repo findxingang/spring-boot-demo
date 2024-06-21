@@ -7,6 +7,7 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 
 /**
+ * 生成数据源的工厂
  * @author xingang
  * @since 2024/6/20 14:41
  */
