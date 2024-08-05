@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.interrupt;
 
 /**
  * 中断一个线程
