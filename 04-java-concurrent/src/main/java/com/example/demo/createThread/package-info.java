@@ -6,4 +6,4 @@
  * @author xingang
  * @since 2024/8/2
  */
-package com.example.demo.createthread;
+package com.example.demo.createThread;

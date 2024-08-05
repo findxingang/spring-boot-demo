@@ -1,4 +1,4 @@
-package com.example.demo.createthread;
+package com.example.demo.createThread;
 
 /**
  * 通过继承Thread类来创建线程

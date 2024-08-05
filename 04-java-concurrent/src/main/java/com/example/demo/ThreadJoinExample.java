@@ -1,7 +1,5 @@
 package com.example.demo;
 
-import com.example.demo.createthread.MyThread;
-
 /**
  * join 的用法
  * @author xingang

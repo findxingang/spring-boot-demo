@@ -1,4 +1,4 @@
-package com.example.demo.createthread;
+package com.example.demo.createThread;
 
 /**
  * @author xingang

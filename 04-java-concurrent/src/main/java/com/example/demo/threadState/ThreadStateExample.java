@@ -1,4 +1,4 @@
-package com.example.demo.threadstate;
+package com.example.demo.threadState;
 
 /**
  * 线程的六种状态
