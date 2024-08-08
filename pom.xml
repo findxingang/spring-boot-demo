@@ -20,6 +20,7 @@
         <module>03-spring-security</module>
         <module>04-java-concurrent</module>
         <module>05-spring-boot-oauth2</module>
+        <module>03-spring-security-jwt-mysql</module>
     </modules>
 
     <properties>
@@ -35,13 +36,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--开发者工具-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
         <!--lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -84,7 +78,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.example.demo.SpringBootDemoApplication</mainClass>
+                    <mainClass>com.example.demo.SpringSecurityApplication</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>

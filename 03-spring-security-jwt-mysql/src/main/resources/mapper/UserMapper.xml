@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.demo.domain.User">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="email" column="email" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <collection property="roles" ofType="com.example.demo.domain.Role" column="{userId=id}"
+                    select="selectRolesByUserId" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,email,name,
+        password
+    </sql>
+
+
+    <select id="selectByUsernameOrEmail" resultMap="BaseResultMap">
+        select *
+        from t_user
+        where name = #{username}
+           or email = #{email}
+    </select>
+
+    <select id="selectRolesByUserId" resultType="com.example.demo.domain.Role">
+        select r.*
+        from t_role r
+                 join t_user_role ur on r.id = ur.role_id
+        where ur.user_id = #{userId}
+    </select>
+</mapper>
