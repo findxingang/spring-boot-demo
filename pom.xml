@@ -21,6 +21,7 @@
         <module>04-java-concurrent</module>
         <module>05-spring-boot-oauth2</module>
         <module>03-spring-security-jwt-mysql</module>
+        <module>06-filter-interceptor</module>
     </modules>
 
     <properties>
@@ -30,18 +31,6 @@
         <spring-boot.version>2.6.13</spring-boot.version>
     </properties>
     <dependencies>
-        <!--web-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!--lombok-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
         <!--测试-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
