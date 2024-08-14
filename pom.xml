@@ -24,6 +24,8 @@
         <module>06-filter-interceptor</module>
         <module>06-filter</module>
         <module>06-Interceptor</module>
+        <module>03-spring-security-demo</module>
+        <module>03-session-jwt</module>
     </modules>
 
     <properties>
