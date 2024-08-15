@@ -8,8 +8,9 @@
         <artifactId>parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+    <packaging>pom</packaging>
 
-    <artifactId>03-spring-security</artifactId>
+    <artifactId>03-authentication-authorization</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -17,25 +18,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
-        <!-- Spring Security  -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-
-        <!--web-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!--lombok-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>03-spring-security-jwt-mysql</module>
+        <module>03-session-jwt</module>
+    </modules>
 
 </project>
