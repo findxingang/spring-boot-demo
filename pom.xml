@@ -19,10 +19,14 @@
     </properties>
 
     <modules>
-        <module>01-demo-copy</module>
+        <!-- 所有项目可以从这里复制 -->
+        <module>01-Copy</module>
+        <!-- Filter 和 Interceptor 相关代码 -->
         <module>02-Filter-Interceptor</module>
-        <module>03-auth</module>
-        <module>04-java-concurrent</module>
+        <!-- 认证授权相关代码 -->
+        <module>03-Authentication-Authorization</module>
+        <!-- Java 并发 -->
+        <module>04-Java-Concurrent</module>
     </modules>
 
     <dependencies>

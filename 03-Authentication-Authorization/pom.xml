@@ -11,8 +11,15 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>01-demo-copy</artifactId>
+    <artifactId>03-Authentication-Authorization</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>03-session-jwt</module>
+        <module>03-spring-boot-oauth2</module>
+        <module>03-spring-security-jwt-mysql</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
