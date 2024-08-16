@@ -10,7 +10,7 @@
     </parent>
     <packaging>pom</packaging>
 
-    <artifactId>03-认证授权</artifactId>
+    <artifactId>03-auth</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>02-Filter和Interceptor</artifactId>
+        <artifactId>02-filter-interceptor</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>02-filter</artifactId>
+    <artifactId>02-filter-demo</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

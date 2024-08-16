@@ -5,12 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>02-Filter和Interceptor</artifactId>
+        <artifactId>02-filter-interceptor</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.example.demo</groupId>
-    <artifactId>02-Interceptor</artifactId>
+    <artifactId>02-filter-interceptor-demo</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -19,13 +18,17 @@
     </properties>
 
     <dependencies>
+        <!--web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!--lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 
