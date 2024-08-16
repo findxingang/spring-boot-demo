@@ -10,7 +10,7 @@
     </parent>
     <packaging>pom</packaging>
 
-    <artifactId>03-authentication-authorization</artifactId>
+    <artifactId>03-认证授权</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -21,6 +21,7 @@
     <modules>
         <module>03-spring-security-jwt-mysql</module>
         <module>03-session-jwt</module>
+        <module>03-spring-boot-oauth2</module>
     </modules>
 
 </project>
