@@ -4,14 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- 固定不变 -->
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>02-Filter-Interceptor</artifactId>
+        <artifactId>03-Authentication-Authorization</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>filter-demo</artifactId>
+    <artifactId>03-spring-security-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <name>03-spring-security-demo</name>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -20,18 +22,11 @@
     </properties>
 
     <dependencies>
-        <!-- Web -->
+        <!--web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <!-- Lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-
     </dependencies>
+
 </project>
