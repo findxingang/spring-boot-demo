@@ -9,10 +9,10 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 @SpringBootApplication
-public class SpringBootDemoApplication {
+public class Application {
 
     public static void main(String[] args) throws UnknownHostException {
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringBootDemoApplication.class, args);
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(Application.class, args);
         ConfigurableEnvironment environment = applicationContext.getEnvironment();
         String appName = environment.getProperty("spring.application.name") != null ? environment.getProperty("spring.application.name") : "";
         String port = environment.getProperty("server.port") != null ? environment.getProperty("server.port") : "8080";

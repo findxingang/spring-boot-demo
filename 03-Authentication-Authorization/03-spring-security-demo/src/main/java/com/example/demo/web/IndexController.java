@@ -16,28 +16,16 @@
 
 package com.example.demo.web;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
 /**
- * @author <a href="mailto:chenxilzx1@gmail.com">theonefx</a>
+ * @author wangxingang
  */
-public class User {
-
-    private String name;
-
-    private Integer age;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
+@Controller
+public class IndexController {
+    @GetMapping("/")
+    public String index() {
+        return "index";
     }
 }

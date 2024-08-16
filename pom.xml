@@ -19,10 +19,10 @@
     </properties>
 
     <modules>
-        <module>01-Copy</module>
-        <module>02-Filter-Interceptor</module>
+<!--        <module>01-Copy</module>-->
+<!--        <module>02-Filter-Interceptor</module>-->
         <module>03-Authentication-Authorization</module>
-        <module>04-Java-Concurrent</module>
+<!--        <module>04-Java-Concurrent</module>-->
     </modules>
 
     <dependencyManagement>

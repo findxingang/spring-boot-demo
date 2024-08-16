@@ -16,11 +16,11 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>03-session-demo</module>
-        <module>03-jwt-demo</module>
+<!--        <module>03-session-demo</module>-->
+<!--        <module>03-jwt-demo</module>-->
         <module>03-spring-security-demo</module>
-        <module>03-spring-security-jwt-mysql</module>
-        <module>03-spring-boot-oauth2</module>
+<!--        <module>03-spring-security-jwt-mysql</module>-->
+<!--        <module>03-spring-boot-oauth2</module>-->
     </modules>
 
 </project>
