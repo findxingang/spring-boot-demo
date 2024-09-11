@@ -1,56 +1,45 @@
 package com.example.demo.config;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.example.demo.domain.User;
-import com.example.demo.mapper.UserMapper;
-import org.springframework.security.core.GrantedAuthority;
+import com.example.demo.domain.CustomUser;
+import com.example.demo.service.CustomUserService;
+import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.Collection;
 
 /**
+ * 基于数据库的 UserDetailsService
  * @author wangxingang
  */
 @Component
 public class DBUserDetailsManager implements UserDetailsManager {
 
     @Resource
-    private UserMapper userMapper;
+    private CustomUserService customUserService;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        // 根据用户名去数据库中查询用户
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("username", username);
-        User user = userMapper.selectOne(queryWrapper);
-        if (user == null) {
+        CustomUser customUser = customUserService.findByUsername(username);
+        if (customUser == null) {
             throw new UsernameNotFoundException(username);
         } else {
-            Collection<GrantedAuthority> authorities = new ArrayList<>();
             return new org.springframework.security.core.userdetails.User(
-                    user.getUsername(),
-                    user.getPassword(),
-                    user.getEnabled(),
-                    true, // 用户账号是否过期
-                    true, // 用户凭证是否过期
-                    true, // 用户是否未被锁定
-                    authorities); // 权限列表
+                    customUser.getUsername(),
+                    customUser.getPassword(),
+                    customUser.getEnabled(),
+                    true, // 如果帐户尚未过期，则设置为true
+                    true, // 如果凭证尚未过期，则设置为true
+                    true, // 如果帐户未被锁定，则设置为true
+                    AuthorityUtils.NO_AUTHORITIES); // 权限列表
         }
     }
 
     @Override
     public void createUser(UserDetails userDetails) {
 
-        User user = new User();
-        user.setUsername(userDetails.getUsername());
-        user.setPassword(userDetails.getPassword());
-        user.setEnabled(true);
-        userMapper.insert(user);
     }
 
     @Override

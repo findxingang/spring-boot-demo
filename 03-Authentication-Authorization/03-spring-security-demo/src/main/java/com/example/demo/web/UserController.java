@@ -1,7 +1,7 @@
 package com.example.demo.web;
 
-import com.example.demo.domain.User;
-import com.example.demo.service.UserService;
+import com.example.demo.domain.CustomUser;
+import com.example.demo.service.CustomUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
@@ -18,16 +18,16 @@ import java.util.List;
 public class UserController {
 
     @Resource
-    public UserService userService;
+    public CustomUserService customUserService;
 
     @GetMapping("/list")
-    public List<User> getList(){
-        return userService.list();
+    public List<CustomUser> getList(){
+        return customUserService.list();
     }
 
     @ApiOperation("添加用户")
     @PostMapping("/add")
-    public void add(@RequestBody User user){
-        userService.saveUserDetails(user);
+    public void add(@RequestBody CustomUser customUser){
+        customUserService.saveUserDetails(customUser);
     }
 }
