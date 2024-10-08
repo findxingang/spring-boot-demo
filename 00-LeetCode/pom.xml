@@ -9,12 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>05-Java</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>05-Java-SPI</module>
-        <module>05-Reflect</module>
-    </modules>
+    <artifactId>00-LeetCode</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
